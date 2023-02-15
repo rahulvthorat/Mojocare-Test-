@@ -1,0 +1,17 @@
+Projects Structure	
+Base	
+Utilities	
+Test Cases	
+Config File
+Test Data	
+Log	
+Report	
+
+
+Dependencies
+Selenium WebDriver
+WebDriver Manager
+TestNG
+Report NG
+Extent Report
+Apache- POI
