@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -22,7 +23,26 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Actions {
+import Base.BaseClass;
+
+
+
+public class Actions extends BaseClass {
+	
+	
+	public static void implicitWait(WebDriver driver, int timeOut) {
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+	public static void pageLoadTimeOut(WebDriver driver, int timeOut) {
+		driver.manage().timeouts().pageLoadTimeout(timeOut, TimeUnit.SECONDS);
+	}
+
+	public static void explicitWait(WebDriver driver, WebElement element, Duration timeOut) {
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+
+	
 
 	public static void scrollByVisibilityOfElement(WebDriver driver, WebElement ele) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -164,7 +184,7 @@ public class Actions {
 	 * @param locatorName : Meaningful name to the element (Ex:Year Dropdown, items
 	 *                    Listbox etc..)
 	 * 
-	 */
+	 **/
 	public static boolean selectByIndex(WebElement element, int index) throws Throwable {
 		boolean flag = false;
 		try {
@@ -686,18 +706,7 @@ public class Actions {
 		}
 	}
 
-	public static void implicitWait(WebDriver driver, int timeOut) {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	}
-
-	public static void explicitWait(WebDriver driver, WebElement element, Duration timeOut) {
-		WebDriverWait wait = new WebDriverWait(driver, timeOut);
-		wait.until(ExpectedConditions.visibilityOf(element));
-	}
-
-	public static void pageLoadTimeOut(WebDriver driver, int timeOut) {
-		driver.manage().timeouts().pageLoadTimeout(timeOut, TimeUnit.SECONDS);
-	}
+	
 
 	public static String screenShot(WebDriver driver, String filename) {
 		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>8/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Feb 15 10:27:35 IST 2023</td>
+<td>Started on:</td><td>Sun Feb 26 10:54:57 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>15 seconds (15448 ms)</td>
+<tr><td>Total time:</td><td>15 seconds (15761 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,10 +76,41 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Test.HomePageTest.compareLogoTest()'><b>compareLogoTest</b><br>Test class: Test.HomePageTest</td>
-<td><div><pre>javax.imageio.IIOException: Can&apos;t read input file!
-	at java.desktop/javax.imageio.ImageIO.read(ImageIO.java:1310)
-	at Test.HomePageTest.compareLogoTest(HomePageTest.java:117)
+<td title='Test.LoginPageTest2.compareLogoTest()'><b>compareLogoTest</b><br>Test class: Test.LoginPageTest2</td>
+<td><div><pre>java.lang.RuntimeException: org.openqa.selenium.JavascriptException: javascript error: el.offset is not a function
+  (Session info: chrome=110.0.5481.105)
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [54c3774146b8bb12252cc526167747a1, executeScript {script=function Coords(el) {
+    this.left = parseInt(el.offset().left);
+    this.top = parseInt(el.offset().top);
+    this.right = parseInt(this.left + el.outerWidth());
+    this.bottom = parseInt(this.top + el.outerHeight());
+}
+
+Coords.prototype.toString = function () {
+    var x = Math.max(this.left, 0);
+    var y = Math.max(this.top, 0);
+    return JSON.stringify({
+        x:x,
+        y:y,
+        width:this.right - x,
+        height:this.bottom - y
+    });
+};
+
+return [(new Coords($(arguments[0]))).toString()];
+, args=[{ELEMENT=3739114a-d57c-4569-88f0-3bd03dfb2d6b, element-6066-11e4-a52e-4f735466cecf=3739114a-d57c-4569-88f0-3bd03dfb2d6b}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.105, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\pankaj\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63158}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63158/devtoo..., se:cdpVersion: 110.0.5481.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 54c3774146b8bb12252cc526167747a1
+	at ru.yandex.qatools.ashot.util.InnerScript.execute(InnerScript.java:32)
+	at ru.yandex.qatools.ashot.util.JsCoords.findCoordsWithJquery(JsCoords.java:24)
+	at ru.yandex.qatools.ashot.coordinates.JqueryCoordsProvider.ofElement(JqueryCoordsProvider.java:14)
+	at ru.yandex.qatools.ashot.coordinates.CoordsProvider.ofElements(CoordsProvider.java:21)
+	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:116)
+	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:134)
+	at Test.LoginPageTest2.compareLogoTest(LoginPageTest2.java:106)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -108,10 +139,83 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace917190676", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace917190676'><pre>javax.imageio.IIOException: Can&apos;t read input file!
-	at java.desktop/javax.imageio.ImageIO.read(ImageIO.java:1310)
-	at Test.HomePageTest.compareLogoTest(HomePageTest.java:117)
+Caused by: org.openqa.selenium.JavascriptException: javascript error: el.offset is not a function
+  (Session info: chrome=110.0.5481.105)
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [54c3774146b8bb12252cc526167747a1, executeScript {script=function Coords(el) {
+    this.left = parseInt(el.offset().left);
+    this.top = parseInt(el.offset().top);
+    this.right = parseInt(this.left + el.outerWidth());
+    this.bottom = parseInt(this.top + el.outerHeight());
+}
+
+Coords.prototype.toString = function () {
+    var x = Math.max(this.left, 0);
+    var y = Math.max(this.top, 0);
+    return JSON.stringify({
+        x:x,
+        y:y,
+        width:this.right - x,
+        height:this.bottom - y
+    });
+};
+
+return [(new Coords($(arguments[0]))).toString()];
+, args=[{ELEMENT=3739114a-d57c-4569-88f0-3bd03dfb2d6b, element-6066-11e4-a52e-4f735466cecf=3739114a-d57c-4569-88f0-3bd03dfb2d6b}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.105, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\pankaj\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63158}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63158/devtoo..., se:cdpVersion: 110.0.5481.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 54c3774146b8bb12252cc526167747a1
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:478)
+	at ru.yandex.qatools.ashot.util.InnerScript.execute(InnerScript.java:30)
+	... 34 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace690070378", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace690070378'><pre>java.lang.RuntimeException: org.openqa.selenium.JavascriptException: javascript error: el.offset is not a function
+  (Session info: chrome=110.0.5481.105)
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [54c3774146b8bb12252cc526167747a1, executeScript {script=function Coords(el) {
+    this.left = parseInt(el.offset().left);
+    this.top = parseInt(el.offset().top);
+    this.right = parseInt(this.left + el.outerWidth());
+    this.bottom = parseInt(this.top + el.outerHeight());
+}
+
+Coords.prototype.toString = function () {
+    var x = Math.max(this.left, 0);
+    var y = Math.max(this.top, 0);
+    return JSON.stringify({
+        x:x,
+        y:y,
+        width:this.right - x,
+        height:this.bottom - y
+    });
+};
+
+return [(new Coords($(arguments[0]))).toString()];
+, args=[{ELEMENT=3739114a-d57c-4569-88f0-3bd03dfb2d6b, element-6066-11e4-a52e-4f735466cecf=3739114a-d57c-4569-88f0-3bd03dfb2d6b}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.105, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\pankaj\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63158}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63158/devtoo..., se:cdpVersion: 110.0.5481.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 54c3774146b8bb12252cc526167747a1
+	at ru.yandex.qatools.ashot.util.InnerScript.execute(InnerScript.java:32)
+	at ru.yandex.qatools.ashot.util.JsCoords.findCoordsWithJquery(JsCoords.java:24)
+	at ru.yandex.qatools.ashot.coordinates.JqueryCoordsProvider.ofElement(JqueryCoordsProvider.java:14)
+	at ru.yandex.qatools.ashot.coordinates.CoordsProvider.ofElements(CoordsProvider.java:21)
+	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:116)
+	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:134)
+	at Test.LoginPageTest2.compareLogoTest(LoginPageTest2.java:106)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -140,9 +244,100 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.JavascriptException: javascript error: el.offset is not a function
+  (Session info: chrome=110.0.5481.105)
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [54c3774146b8bb12252cc526167747a1, executeScript {script=function Coords(el) {
+    this.left = parseInt(el.offset().left);
+    this.top = parseInt(el.offset().top);
+    this.right = parseInt(this.left + el.outerWidth());
+    this.bottom = parseInt(this.top + el.outerHeight());
+}
+
+Coords.prototype.toString = function () {
+    var x = Math.max(this.left, 0);
+    var y = Math.max(this.top, 0);
+    return JSON.stringify({
+        x:x,
+        y:y,
+        width:this.right - x,
+        height:this.bottom - y
+    });
+};
+
+return [(new Coords($(arguments[0]))).toString()];
+, args=[{ELEMENT=3739114a-d57c-4569-88f0-3bd03dfb2d6b, element-6066-11e4-a52e-4f735466cecf=3739114a-d57c-4569-88f0-3bd03dfb2d6b}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.105, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\pankaj\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63158}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63158/devtoo..., se:cdpVersion: 110.0.5481.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 54c3774146b8bb12252cc526167747a1
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:478)
+	at ru.yandex.qatools.ashot.util.InnerScript.execute(InnerScript.java:30)
+	... 34 more
 </pre></div></td>
 <td>0</td>
-<td>Test.HomePageTest@2462cb01</td></tr>
+<td>Test.LoginPageTest2@7d7758be</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Test.LoginPageTest2.VerifyUrl()'><b>VerifyUrl</b><br>Test class: Test.LoginPageTest2</td>
+<td></td>
+<td>0</td>
+<td>Test.LoginPageTest2@7d7758be</td></tr>
+<tr>
+<td title='Test.LoginPageTest2.verifyPassworTextbox()'><b>verifyPassworTextbox</b><br>Test class: Test.LoginPageTest2</td>
+<td></td>
+<td>0</td>
+<td>Test.LoginPageTest2@7d7758be</td></tr>
+<tr>
+<td title='Test.LoginPageTest2.verifyText()'><b>verifyText</b><br>Test class: Test.LoginPageTest2</td>
+<td></td>
+<td>0</td>
+<td>Test.LoginPageTest2@7d7758be</td></tr>
+<tr>
+<td title='Test.LoginPageTest2.VerifyTitle()'><b>VerifyTitle</b><br>Test class: Test.LoginPageTest2</td>
+<td></td>
+<td>0</td>
+<td>Test.LoginPageTest2@7d7758be</td></tr>
+<tr>
+<td title='Test.LoginPageTest2.verifyForgotpasswordlink()'><b>verifyForgotpasswordlink</b><br>Test class: Test.LoginPageTest2</td>
+<td></td>
+<td>0</td>
+<td>Test.LoginPageTest2@7d7758be</td></tr>
+<tr>
+<td title='Test.LoginPageTest2.verifyLoginbutton()'><b>verifyLoginbutton</b><br>Test class: Test.LoginPageTest2</td>
+<td></td>
+<td>0</td>
+<td>Test.LoginPageTest2@7d7758be</td></tr>
+<tr>
+<td title='Test.LoginPageTest2.verifyCreateAccountbutton()'><b>verifyCreateAccountbutton</b><br>Test class: Test.LoginPageTest2</td>
+<td></td>
+<td>0</td>
+<td>Test.LoginPageTest2@7d7758be</td></tr>
+<tr>
+<td title='Test.LoginPageTest2.verifyUsernametextbox()'><b>verifyUsernametextbox</b><br>Test class: Test.LoginPageTest2</td>
+<td></td>
+<td>0</td>
+<td>Test.LoginPageTest2@7d7758be</td></tr>
 </table><p>
 </body>
 </html>
