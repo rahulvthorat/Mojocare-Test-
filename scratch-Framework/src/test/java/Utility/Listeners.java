@@ -1,15 +1,12 @@
 package Utility;
 
 import java.io.IOException;
-
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-
 import Base.BaseClass;
 
 public class Listeners extends ExtentManager implements ITestListener {

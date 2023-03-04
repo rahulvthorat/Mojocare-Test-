@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import Base.BaseClass;
 import Pages.LoginPage;
 
-public class LoginPageTest extends BaseClass {
+public class LoginPageTest1 extends BaseClass {
 
 	@BeforeClass
 	public void setup() throws InterruptedException {
